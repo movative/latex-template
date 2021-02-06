@@ -1,0 +1,76 @@
+% Akronyme
+%--------------------------------------------------------------------------
+\newacronym{acn:MS}{MS}{Microsoft}
+\newacronym{acn:CD}{CD}{Compact Disc}
+\newacronym{acn:AC}{AC}{Aachen}
+\newacronym{acn:FH}{FH}{Fachhochschule}
+\newacronym{acn:TU}{TU}{Technical University}
+\newacronym{acn:UNB}{\"UNB}{Übertragungsnetzbetreiber}
+\newacronym{acn:AD}{AD}{Active Directory\protect\glsadd{glos:AD}}
+
+% Glossar
+%--------------------------------------------------------------------------
+\newglossaryentry{glos:FH}{
+	name=FH, 
+	description={Fachhochschule}
+}
+\newglossaryentry{glos:AC}{
+	name={AC},
+	description={Aachen}
+}
+\newglossaryentry{glos:AD}{
+	name=Active Directory,
+	description={Active Directory ist in einem Windows 2000 "Windows
+	Server 2003-Netzwerk der Verzeichnisdienst, der die zentrale
+	Organisation und Verwaltung aller Netzwerkressourcen erlaubt. Es
+	ermöglicht den Benutzern über eine einzige zentrale Anmeldung den
+	Zugriff auf alle Ressourcen und den Administratoren die zentral
+	organisierte Verwaltung, transparent von der Netzwerktopologie und
+	den eingesetzten Netzwerkprotokollen. Das dafür benötigte
+	Betriebssystem ist entweder Windows 2000 Server oder
+	Windows Server 2003, welches auf dem zentralen
+	Domänencontroller installiert wird. Dieser hält alle Daten des
+	Active Directory vor, wie z.B. Benutzernamen und
+	Kennwörter.}
+}
+\newglossaryentry{glos:AntwD}{
+	name=Antwortdatei,
+	description={Informationen zum Installieren einer Anwendung oder des Betriebssystems.}
+}
+
+% Zusätzliche Glossare
+%--------------------------------------------------------------------------
+% Readme
+%	newglossary[Metafile_Ending]{}
+% 	Reservierte Metafile_Endings:
+% 		Main Glossery(glg, gls, glo)
+%		Acronyme(alg, acn, acr)
+% 	Beispiel:
+% 	[abc]{typename}{abc}{abc}{Title}
+% 	[slg]{symbolslist}{syi}{syg}{Additional Glossar}
+%--------------------------------------------------------------------------
+% Definitions
+%--------------------------------------------------------------------------
+\newglossary[slg]{symbolslist}{syi}{syg}{Symbolverzeichnis}
+
+% Einträge
+%--------------------------------------------------------------------------
+\newglossaryentry{symb:Pi}{
+	name=$\pi$,
+	description={Die Kreiszahl.},
+	sort=symbolpi,
+	type=symbolslist
+}
+\newglossaryentry{symb:Phi}{
+	name=$\varphi$,
+	description={Ein beliebiger Winkel.},
+	sort=symbolphi,
+	type=symbolslist
+}
+\newglossaryentry{symb:Lambda}{
+	name=$\lambda$,
+	description={Eine beliebige Zahl, mit der der nachfolgende Ausdruck
+		multipliziert wird.},
+	sort=symbollambda,
+	type=symbolslist
+}

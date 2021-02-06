@@ -1,0 +1,54 @@
+% Packages
+%--------------------------------------------------------------------------
+\usepackage[utf8]{inputenc} % UTF8 für Deutsche Umlaute
+\usepackage[ngerman]{babel} % Silbentrennung
+\usepackage[T1]{fontenc} % 8-Bit Fontencoding
+\usepackage{kpfonts} % Kepler-Fonts
+\usepackage{setspace} % Zeilenabstand
+\usepackage{amsmath, amssymb, stmaryrd} % Math
+\usepackage{geometry, chngpage, scrlayer-scrpage} % Seitenränder & Header/Footer
+\usepackage{graphicx, svg, tikz} %Abbildungen http://www.tickerverbot.de/grafiken-fur-latex
+\usetikzlibrary{patterns,decorations.pathreplacing} % Use tikz
+\usepackage{booktabs}% Tabellen 
+\usepackage{xcolor, colortbl}
+\usepackage{float} \restylefloat{table} % Verschiebt angemessen Abbildungen und Tabellen
+\usepackage{scrhack, listings, enumitem} % Schicke Aufzählungen
+
+% Verlinkung von Verzeichnissen, Quellen, WWW-links, etc.
+\usepackage
+[colorlinks,
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black,
+filecolor=black,
+urlcolor=black]{hyperref}
+\usepackage{memhfixc} %hyperref fix
+\usepackage{tocloft}
+% Verzeichnis
+\usepackage[acronym, toc, automake, nonumberlist, nopostdot]{glossaries}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes} %ToDo Listen
+\newcommand{\fehler}[2][1=]{\todo[inline,linecolor=red, backgroundcolor=cyan]{#2}} %https://tex.stackexchange.com/questions/9796/how-to-add-todo-notes\textbf{}
+\usepackage{ifthen} % Logik für Einstellungen
+
+% Neue Befehle
+%--------------------------------------------------------------------------
+% Linienbreite und größe der Abbildungen
+\newcommand{\ruleThickness}{2.5pt}
+\newcommand{\figurewidth}{0.8\textwidth}
+\newcommand{\tablewidth}{1\textwidth}
+\newcommand{\spacebetween}[1]{\renewcommand{\arraystretch}{#1}}
+\newcommand{\dashrule}{\color{rulecolor}\makebox[\linewidth]{\rule[\dimexpr.5ex-.2pt]{4pt}{.4pt}\xleaders\hbox{\rule{4pt}{0pt}\rule[\dimexpr.5ex-.2pt]{4pt}{.4pt}}\hfill\kern0pt}}
+\arrayrulecolor{rulecolor}
+
+% Verzeichniseinstellung
+\setlength{\glslistdottedwidth}{.3\linewidth}
+\newlistof{equations}{equ}{Formelverzeichnis}
+\newcommand{\equations}[1]{\begin{center}#1\end{center}\addcontentsline{equ}{equations}{\protect\numberline{\theequation}#1}\par}
+
+% Nummerierung auf Vakatseiten
+\newcommand{\makevakat}{\makeatletter \let\ps@empty\ps@plain\makeatother}

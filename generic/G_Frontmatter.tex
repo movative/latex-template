@@ -1,0 +1,55 @@
+% Titelseiten
+\begin{onehalfspace}
+	%Buchcover
+	\ifthenelse{\boolean{book}}{\include{generic/G_Cover}}{}
+	 
+	 %Titelseite
+	\include{generic/G_Titelseite}
+	
+	 %ToDo
+	\ifthenelse{\boolean{todo}}{\listoftodos[ToDo]}{}
+	
+	\cleardoublepage
+
+	%Eidesstattliche Erklärung
+	\ifthenelse{\boolean{own}}{\include{generic/G_Eides}\cleardoublepage}{} 
+\end{onehalfspace}
+
+% Verzeichnisse
+\begin{singlespace}
+	\pagenumbering{Roman}
+	
+	% Inhaltsverzeichnis
+	\ifthenelse{\boolean{toc}}{
+		\tableofcontents
+	}{} 
+	
+	% Abkürzungsverzeichnis
+	\ifthenelse{\boolean{acn}}{
+		% styles:(listdotted|indexgroup|indexhypergroup)
+		\printglossary[type=\acronymtype,title={Abkürzungsverzeichnis}, style=indexgroup]
+		\cleardoublepage
+	}{}
+	
+	% Abbildungsverzeichnis
+	\ifthenelse{\boolean{lof}}{
+		\listoffigures
+		\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+		\cleardoublepage
+	}{}
+	
+	% Formelverzeichnis
+	\ifthenelse{\boolean{loe}}{
+		\listof{equations}{Formelverzeichnis}
+		\addcontentsline{toc}{chapter}{Formelverzeichnis}
+		\cleardoublepage
+	}{}
+	
+	% Tabellenverzeichnis
+	\ifthenelse{\boolean{lot}}{
+		\listoftables
+		\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+		\cleardoublepage
+	}{}
+\end{singlespace}
+

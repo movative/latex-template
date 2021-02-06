@@ -1,0 +1,71 @@
+% Pre Configuration
+%--------------------------------------------------------------------------
+
+% Fehlermeldungen
+\showboxbreadth=50\showboxdepth=50
+
+% Dokumentenklasse
+\documentclass
+[titlepage,
+twoside,
+openright,
+dvipsnames,
+fontsize=12pt]{scrbook}
+
+% Packages und Befehle
+\pdfminorversion=7
+\input{config/C_Packages}
+
+% Configuration
+%--------------------------------------------------------------------------
+
+% PDF Version für Konvertierte EPS Files
+
+% Seiten Einstellungen
+\ohead{\headmark}% [1mm]\rule{\textwidth}{0.5mm}} % Kopfzeile
+\automark[section]{chapter} % Kopfzeile
+\geometry{a4paper, top=30mm, bottom=25mm, left=50mm, right=20mm, headsep=10mm, footskip=10mm} % Seitenränder
+\bibliographystyle{alphadin} % Mögliche Zitationsstile (unvollständig): abbrv, acm, apalike, alphadin (nach DIN 1505), alpha, ieeetr, plain, siam,  unsrt
+
+% Color Definition
+\definecolor{rulecolor}{cmyk}{1.0000,0.0000,0.0442,0.2902}
+\definecolor{specialpagecolor}{cmyk}{1,.60,0,.40}
+
+
+% Welche generischen Inhalte erzeugt werden sollen
+\newboolean{title}\setboolean{title}{true} % Titel
+\newboolean{titleWithRules}\setboolean{titleWithRules}{true} % Title mit Linien
+\newboolean{pruefer}\setboolean{pruefer}{true} % Prüfer
+\newboolean{book}\setboolean{book}{false} % Buchcover und Klappentext
+\newboolean{ent}\setboolean{ent}{true} % Entwurf
+\newboolean{todo}\setboolean{todo}{false} % ToDo List
+\newboolean{own}\setboolean{own}{true} % Selbsständigkeitserklärung
+\newboolean{toc}\setboolean{toc}{true} % Inhaltsverzeichnis
+\newboolean{acn}\setboolean{acn}{true} % Abkürzung
+\newboolean{glos}\setboolean{glos}{true} % Glossar
+\newboolean{aglos}\setboolean{aglos}{true} % Additional Glossar
+\newboolean{loe}\setboolean{loe}{true} % Gleichungen
+\newboolean{lof}\setboolean{lof}{true} % Abbildung
+\newboolean{lot}\setboolean{lot}{true} % Tabellen
+\newboolean{bib}\setboolean{bib}{true} % Literatur
+\newboolean{vakat}\setboolean{vakat}{false} % Seitenzahl auf Vakatseiten
+
+% Titel und Co.
+\newcommand{\ArtDerArbeit}{Masterarbeit}
+\newcommand{\OrtDerArbeit}{im Studiengang Energiewirtschaft und Informatik des Fachbereichs Energietechnik in Jülich}
+\newcommand{\Titel}{Eine Latexvorlage für die Masterarbeit}
+\newcommand{\Autor}{
+	\ Max Mustermann\\
+	\ Matrikelnummer: 123456789\\
+	\ geboren am 01.01.1970\\
+	\ in Jülich}
+\newcommand{\Prufer}
+{
+	\ Prof. Dr. Beispiel Prüfer 1 \\
+	\ Dipl.-Ing. Beispiel Prüfer 1\\
+	\ \\
+	\
+}
+
+% Seitenzahl auf Vakatseiten
+\ifthenelse{\boolean{vakat}}{\makevakat}{} 

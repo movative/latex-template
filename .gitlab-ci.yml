@@ -1,0 +1,11 @@
+latex-build:
+    stage: build
+    image: embix/texlive-full
+    script:
+    - pdflatex main
+    artifacts:
+        name: "thesis"
+        when: on_success
+        paths:
+          - main.pdf
+        expire_in: 2 week

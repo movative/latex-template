@@ -1,0 +1,25 @@
+\begin{onehalfspace}
+	\ifthenelse{\boolean{book}}{
+		\cleardoublepage
+		\begin{titlepage}
+			\pagestyle{empty}
+			\newgeometry{top=25mm, left=25mm, right=30mm, bottom=25mm}
+			\begin{tikzpicture}[remember picture,overlay]
+			\path [fill=TealBlue] (-5,0)rectangle (30,-9);
+			\end{tikzpicture}
+			%	\begin{tikzpicture}[remember picture,overlay]
+			%		\path [fill=specialpagecolor] (current page.west)rectangle (current page.north east);
+			%	\end{tikzpicture}
+			%	\color{white}
+			%	\begin{minipage}{0.1\linewidth}
+			%		\rule{\ruleThickness}{10cm}
+			%	\end{minipage}
+			%	\begin{minipage}{0.8\linewidth}
+			%		\begin{minipage}{\linewidth}
+			%			{\huge\emph{Kurzfassung}}\\[0.5cm]
+			%			Ziel der hier vorgestellten Bachelorarbeit ist es einen Überblick über die Marktprozesse, Marktteilnehmer und Einflussfaktoren auf den Direktverbrauch von Mieterstrommodellen zu verschaffen. Konkreter wird auf die Aufgaben im Bereich des Messstellenbetriebs und die der Abrechnung von Teilnehmern und Betreibern eines Mieterstrommodells eingegangen. Dazu werden verschiedene Messkonzepte vorgestellt, die zur Abrechnung von Haushalten im Mieterstrommodell verwendet werden. Dabei soll gezeigt werden welche Problematiken durch die Verwendung von unterschiedlichen Messeinrichtungen entstehen. Die Ergebnisse der Analyse von Messkonstrukte geschieht anhand tatsächlich gemessener Lastprofile und modellierter Daten, welche mit einer genaueren Abrechnungsmethode in Relation gesetzt werden.
+			%		\end{minipage}
+			%	\end{minipage}
+		\end{titlepage}
+	}{}
+\end{onehalfspace}

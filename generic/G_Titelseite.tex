@@ -1,0 +1,77 @@
+\pagestyle{empty}
+\begin{titlepage}
+	\newgeometry{top=25mm, left=25mm, right=25mm, bottom=25mm}
+	\begin{center}
+		%----------------------------------------------------------------------
+		%Oberer Teil der Titelseite:
+		\begin{minipage}{0.45\textwidth}
+			\begin{flushleft}
+				\includegraphics[height=14.0mm]{generic/img/Musterfirma-Logo.png}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.45\textwidth}
+			\begin{flushright}
+				\ \\[2cm]
+				\includegraphics[angle=-90,origin=c,height=32.0mm]{generic/img/FH_AAC.png}
+			\end{flushright}
+		\end{minipage}
+		\ \\[1cm]
+		%----------------------------------------------------------------------
+		%Titel
+		\LARGE{\ArtDerArbeit\\[0.5cm]}
+		\large{\OrtDerArbeit}
+		\ifthenelse{\boolean{title}}{
+			\ifthenelse{\boolean{titleWithRules}}{
+				\\[0.5cm]
+				\rule{\textwidth}{\ruleThickness}
+				\\
+				\huge{\bfseries{\Titel}}
+				\\
+				\rule{\textwidth}{\ruleThickness}
+				\\[1cm]
+			}{
+			\\[1cm]
+			\huge{\bfseries{\Titel}}
+			}
+		}{
+			\ \\[2.5cm]
+			%Nothing
+		}
+		%----------------------------------------------------------------------
+		%Entwurf
+		\ifthenelse{\boolean{ent}}{
+			\huge{\textcolor{red}{--- ENTWURF ---}}
+		}{
+			\ \\[2cm]
+		}
+		%----------------------------------------------------------------------
+		%Verfasser & Prüfer
+		\ifthenelse{\boolean{pruefer}}{
+			\ \\[2cm]
+			\begin{minipage}{0.5\textwidth}
+				\begin{flushleft}
+					\large \emph{Verfasser}\\
+					\Autor
+				\end{flushleft}
+			\end{minipage}
+			\begin{minipage}{0.45\textwidth}
+				\begin{flushright}
+					\large \emph{Prüfer}\\
+					\Prufer
+				\end{flushright}
+			\end{minipage}
+		}{
+			\begin{flushleft}
+				\ \\[2cm]
+				\large \emph{Verfasser}\\
+				\Autor
+			\end{flushleft}
+		
+		}
+		%----------------------------------------------------------------------
+		\vfill
+		% Unterer Teil der Seite
+		% "\today" für Datum der Erstellung, Festes Datum möglich
+		{\large \today}
+	\end{center}
+\end{titlepage}

@@ -1,0 +1,30 @@
+% !TeX program = pdflatex
+% Document Preamble - Beim erten Generieren: f5 f9 f8 f5 f5
+%--------------------------------------------------------------------------
+\input{config/C_Configuration} 
+
+% Glossar Einträge
+\input{entries/E_Entries}
+%--------------------------------------------------------------------------
+
+\begin{document}
+	\frontmatter
+	\input{generic/G_Frontmatter}
+	
+	\mainmatter
+	\begin{onehalfspace}
+		\input{chapter/B_Beispiel}
+	\end{onehalfspace}
+	
+	\appendix
+	\begin{singlespace}
+		\cleardoublepage
+		\pagenumbering{roman}
+		\input{generic/G_Glossaries}
+		\input{chapter/A_Anhang}
+		\newpage
+	\end{singlespace}
+	\backmatter
+	\input{generic/G_Backmatter}
+	
+\end{document}

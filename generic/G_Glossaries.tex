@@ -1,0 +1,16 @@
+\ifthenelse{\boolean{glos}}{
+	% styles:(altlist|listdotted|indexgroup|indexhypergroup)
+	\printglossary[title=Glossar, style=altlist]% Glossar
+	\cleardoublepage
+}{}
+
+\ifthenelse{\boolean{aglos}}{
+	% styles:(altlist|listdotted|indexgroup|indexhypergroup)
+	\printglossary[type=symbolslist,style=long]% Symbolverzeichnis
+	\cleardoublepage
+}{}
+
+\ifthenelse{\boolean{bib}}{
+	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+	\bibliography{literatur} % Literaturverzeichnis
+}{}

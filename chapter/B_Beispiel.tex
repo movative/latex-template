@@ -1,0 +1,162 @@
+\chapter{Beispiel: Kapitel}\label{chap:example}
+Dies ist eine Kapitel.
+
+\section{Beispiel: Abschnitt}\label{sec:example}
+Dies ist eine Abschnitt.
+
+\section{Beispiel: Unterabschnitt}\label{subsec:example}
+Dies ist eine Unterabschnitt.
+
+\subsubsection{Beispiel: Teilabschnitt}
+Dies ist ein Teilabschnitt.
+
+\section{Beispiel: Sonstige Komponenten}
+\subsection{Abbildungen}
+\begin{figure}[H]
+	\centering
+	\fbox{\includegraphics[width=\figurewidth]{generic/img/FuBK_testcard_vectorized.eps}}
+	\caption{Testbild Abbildung  \small{Quelle: \cite{Diefenbach.1961}}}
+	\label{fig:Test}
+\end{figure}
+
+\subsection{Akronyme}
+Beispiel von der Benutzung von Abkürzungen:\\
+Bei der ersten Nutzung, werden die Abkürzungen ausgeschrieben \gls{acn:FH} \gls{acn:AC}.\\
+Bei der zweiten Nutzung, nur abgekürzt: \gls{acn:FH} \gls{acn:AC}.\\
+Umlautbeispiel: \gls{acn:UNB} \\
+
+\subsection{Glossar}
+\glqq In unserem Netzwerk setzen wir auf \gls{acn:AD}. Durch den Einsatz
+eines \gls{acn:AD} erreichen wir bei \gls{acn:MS}-Systemen, die mit einer
+\gls{glos:AntwD} von \gls{acn:CD} installiert wurden, die beste Standardisierung.
+
+\subsection{Symbole}
+Berechnungen mit \gls{symb:Pi} ergeben stets ein ungenaues Ergebnis,
+denn \gls{symb:Pi} ist eine irrationale Zahl. Weiterhin gibt es noch
+\gls{symb:Phi} und \gls{symb:Lambda}.
+
+\subsection{Aufzählung}
+\begin{itemize}
+	\item[a)] Aufzählung A
+	\item[b)] Aufzählung B
+\end{itemize}
+\begin{itemize}
+	\item[1.] Aufzählung 1
+	\item[2.] Aufzählung 2
+\end{itemize}
+
+\subsection{Formel}
+\begin{figure}[H]
+	\begin{equation}\label{eq:Example}
+	\begin{split}
+	&x = Testvariable 1\\
+	&y = Testvariable 2\\
+	\ \\
+	f(x,y) &= 
+	\begin{cases} 
+	x + y \textnormal{ für } x <= 100 \\ 
+	x \textnormal{ für } 100 < x  \\
+	\end{cases}\\
+	\end{split}
+	\end{equation}
+	\equations{Beispielformel \small{Quelle: [Eigene Darstellung]}}
+\end{figure}
+
+\subsection{Umlaute}
+Ohne Pakete  \"A, \"O, \"U, \"a, \"o, \"u und \ss{} \\
+Ohne Pakete {\"A}, {\"O}, {\"U}, {\"a}, {\"o}, {\"u} und {\ss} \\
+Durch babel mit ngerman "A, "O, "U, "a, "o, "u und "s \\
+Durch selinput umgewandelt Ä, Ö, Ü, ä, ö, ü und ß
+
+\subsection{Tabelle}
+\begin{table}[H]
+	\centering
+	\caption{Beispieltabelle 1 \small{Quelle:  [Eigene Darstellung]}}
+	\label{tab:Example}
+	\fbox{
+		\spacebetween{1.5}
+		\begin{tabular}{c|c|c}
+			\textbf{Überschrift 1} & \textbf{Überschrift 2} & \textbf{Überschrift 3}\\
+			\hline
+			\hline
+			Viel Inhalt & Viel Inhalt & Viel Inhalt\\
+			\hline
+			Viel Inhalt & Viel Inhalt & Viel Inhalt\\
+			\hline
+			Viel Inhalt & Viel Inhalt & Viel Inhalt\\
+		\end{tabular}
+	}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\caption{Beispieltabelle 2 \small{Quelle:  [Eigene Darstellung]}}
+	\resizebox{\tablewidth}{!}{
+		\spacebetween{1.3}
+		\begin{tabular}{@{}rrrrcrrrcrrr@{}}
+			\toprule
+			& \multicolumn{3}{c}{$w = 8$} & \phantom{abc}& \multicolumn{3}{c}{$w = 16$} &
+			\phantom{abc} & \multicolumn{3}{c}{$w = 32$}\\
+			\cmidrule{2-4} \cmidrule{6-8} \cmidrule{10-12}
+			& $t=0$ & $t=1$ & $t=2$ && $t=0$ & $t=1$ & $t=2$ && $t=0$ & $t=1$ & $t=2$\\ \midrule
+			$dir=1$\\
+			$c$ & 0.0790 & 0.1692 & 0.2945 && 0.3670 & 0.7187 & 3.1815 && -1.0032 & -1.7104 & -21.7969\\
+			$c$ & -0.8651& 50.0476& 5.9384&& -9.0714& 297.0923& 46.2143&& 4.3590& 34.5809& 76.9167\\
+			$c$ & 124.2756& -50.9612& -14.2721&& 128.2265& -630.5455& -381.0930&& -121.0518& -137.1210& -220.2500\\
+			$dir=0$\\
+			$c$ & 0.0357& 1.2473& 0.2119&& 0.3593& -0.2755& 2.1764&& -1.2998& -3.8202& -1.2784\\
+			$c$ & -17.9048& -37.1111& 8.8591&& -30.7381& -9.5952& -3.0000&& -11.1631& -5.7108& -15.6728\\
+			$c$ & 105.5518& 232.1160& -94.7351&& 100.2497& 141.2778& -259.7326&& 52.5745& 10.1098& -140.2130\\
+			\bottomrule
+		\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Beispieltabelle 3 \small{Quelle: [Eigene Darstellung]}}
+	\spacebetween{1}
+	\begin{tabular}{@{}cccc@{}}
+		\toprule
+		procesy & Min & Max & Delta \\
+		\midrule
+		Junior & 1,700 & 3,200 &  1,500  \\
+		\multicolumn{4}{@{}c@{}}{\dashrule} \\
+		Senior & ? & ? & ? \\
+		\multicolumn{4}{@{}c@{}}{\dashrule} \\
+		Specialist & ? & ? & ? \\
+		\multicolumn{4}{@{}c@{}}{\dashrule} \\
+		Team Leader & ? & ? & ? \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+	
+
+\subsection{Text}
+\tiny{tiny}\\ % smallest size
+\scriptsize{scriptsize}\\ % size of supscripts
+\footnotesize{footnotesize}\\ % size of footnotes
+\small{small}\\
+\normalsize{normalsize}\\ % size of regular text
+\large{large}\\
+\Large{Large}\\
+\LARGE{LARGE}\\
+\huge{huge}\\
+\Huge{Huge}\\ % biggest size
+
+\subsection{Zitierweisen}
+\normalsize
+
+\subsubsection{DIN 1505 Standard}
+\glqq Das Wort zitieren geht zurück auf lateinisch citare, das >>herbeirufen<<, auch >>anrufen, erwähnen, nennen<< bedeutet.\grqq [Dud17]
+
+\subsubsection{APA-Stil}
+\glqq Das Wort zitieren geht zurück auf lateinisch citare, das >>herbeirufen<<, auch >>anrufen, erwähnen, nennen<< bedeutet.\grqq [Dudenredaktion.2017]
+
+\subsubsection{Deutscher-Stil}
+\glqq Das Wort zitieren geht zurück auf lateinisch citare, das >>herbeirufen<<, auch >>anrufen, erwähnen, nennen<< bedeutet.\grqq\footnote{Dudenredaktion (Hg.) (2017): Zitate und Aussprüche. Herkunft und aktueller Gebrauch. 4. Auflage. Berlin: Bibliographisches Institut; Duden (Duden - Deutsche Sprache in 12 Bänden, 12).}
+
+\subsection{Weiter Beispiele}
+http://www.texample.net/\\
+http://www.texample.net/tikz/examples/feature/trees/
